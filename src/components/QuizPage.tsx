@@ -92,14 +92,14 @@ const QuizPage: React.FC = () => {
             <button id="quizb"
               onClick={() => handleOptionClick(option)}
               style={{
-                backgroundColor: selectedAnswer === option ? 'green' : 'white',
+                backgroundColor: selectedAnswer === option ? '#55BE87' : '#6153CA',
               }}
               dangerouslySetInnerHTML={{ __html: option }}
             />
           </li>
         ))}
       </ul>
-      <button onClick={handleNextQuestion} disabled={!selectedAnswer}>
+      <button id="next" onClick={handleNextQuestion} disabled={!selectedAnswer}>
         {currentQuestionIndex === questions.length - 1 ? "Finish Quiz" : "Next Question"}
       </button>
       </div>
